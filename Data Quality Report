@@ -1,0 +1,30 @@
+Data Quality Report
+
+Missing Values: Initially found missing values in columns :
+
+
+brand                 5.0 %
+price                 1.0 %
+payment_method        5.0 %
+delivery_days         1.0 %
+region                5.0 %
+customer_age_group    5.0 %
+device_type           5.0 %
+    
+
+Data Types: All columns have appropriate data types after corrections; order_date converted to datetime, 
+delivery_days converted from float to integer.
+
+Inconsistent Pricing: final_price values were inconsistent with price and discount_percent; identified via isconsistent_price.
+
+Missing Value Handling: Numerical missing values filled with column mean; categorical missing values filled with mode.
+
+Duplicates: Found no duplicate rows.
+
+Outliers: Histogram inspection indicated no significant outliers in numerical features. Final price column was skewed.
+
+Feature Engineering: Added new columns: order_year, order_month, order_week, discounted, unit_price, and delivery_status (fast/slow delivery).
+
+Customer Aggregation: Created customer-level summary for spend, order count, rating, and returns.
+
+Since there were no outliers, the size of data frame remained samebefore and after preprocessing data.
